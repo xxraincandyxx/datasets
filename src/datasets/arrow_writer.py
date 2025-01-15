@@ -477,7 +477,7 @@ class ArrowWriter:
         batch_examples = {}
         for col in cols:
             # We use row[0][col] since current_examples contains (example, key) tuples.
-            # Morever, examples could be Arrow arrays of 1 element.
+            # Moreover, examples could be Arrow arrays of 1 element.
             # This can happen in `.map()` when we want to re-write the same Arrow data
             if all(isinstance(row[0][col], (pa.Array, pa.ChunkedArray)) for row in self.current_examples):
                 arrays = [row[0][col] for row in self.current_examples]

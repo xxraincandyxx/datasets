@@ -3419,7 +3419,7 @@ class Dataset(DatasetInfoMixin, IndexableMixin, TensorflowDatasetMixin):
             return buf_writer, writer, tmp_file
 
         num_examples_progress_update = 0
-        # If `update_data` is True after processing the first example/batch, initalize these resources with `init_buffer_and_writer`
+        # If `update_data` is True after processing the first example/batch, initialize these resources with `init_buffer_and_writer`
         buf_writer, writer, tmp_file = None, None, None
 
         # Check if Polars is available and import it if so
