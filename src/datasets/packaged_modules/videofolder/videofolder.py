@@ -19,7 +19,7 @@ class VideoFolderConfig(folder_based_builder.FolderBasedBuilderConfig):
 
 
 class VideoFolder(folder_based_builder.FolderBasedBuilder):
-    BASE_FEATURE = datasets.Video
+    # BASE_FEATURE = datasets.Video
     BASE_COLUMN_NAME = "video"
     BUILDER_CONFIG_CLASS = VideoFolderConfig
     EXTENSIONS: List[str]  # definition at the bottom of the script
